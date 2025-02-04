@@ -13,7 +13,7 @@ public class CompteAnnuel {
     
     // Clé étrangère vers Utilisateur
     public Guid UtilisateurId { get; set; }
-    public Utilisateur Utilisateur { get; set; }  // Navigation property
+    public User User { get; set; }  // Navigation property
     
     [NotMapped] // Calculé dynamiquement
     public decimal RevenusAnnuel { get; set; }
