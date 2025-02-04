@@ -9,9 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<AppDbContext>(optionsBuilder => {
-    optionsBuilder.UseSqlServer(builder.Configuration["DbConnectionString"]!);
-});
+// Use Pomelo's MySQL provider (compatible with MariaDB)
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(builder.Configuration["DbConnectionString"]!, 
+        new MySqlServerVersion(new Version(10, 4, 34)) // Change version to match your MariaDB version
+    ));
 
 
 
