@@ -8,6 +8,9 @@ public class Compte {
     public string Nom { get; set; }
     public string Numero { get; set; }
     public decimal Solde { get; set; }
+    // Clé étrangère vers Utilisateur
+    public Guid UserId { get; set; }
+    public User User { get; set; }  // Navigation property
     public bool Partage { get; set; }
-    public string? PersonnePartage { get; set; }
+    public Guid SharingUserId { get; set; }
 }

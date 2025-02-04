@@ -12,7 +12,7 @@ public class CompteAnnuel {
     public List<CompteMensuel> ComptesMensuels { get; set; } = new();
     
     // Clé étrangère vers Utilisateur
-    public Guid UtilisateurId { get; set; }
+    public Guid UserId { get; set; }
     public User User { get; set; }  // Navigation property
     
     [NotMapped] // Calculé dynamiquement

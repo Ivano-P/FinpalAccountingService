@@ -10,8 +10,8 @@ public class Facture {
     public FrequencePrelevement Frequence { get; set; }
     public bool Partage { get; set; }
     public decimal? TauxDePartage { get; set; }
-    public string? PersonnePartage { get; set; }
-
+    
+    public Guid SharingUserId { get; set; }
     public int CompteId { get; set; }
     public Compte CompteDePrelevement { get; set; }
 }
