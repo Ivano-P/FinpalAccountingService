@@ -1,0 +1,6 @@
+@FinpalAccountingService_HostAddress = http://localhost:5259
+
+GET {{FinpalAccountingService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
